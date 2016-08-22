@@ -123,6 +123,17 @@ Board.prototype.won = function () {
   return won;
 };
 
+Board.prototype.clone = function() {
+  let newBoard = Object.assign(new Board(), this);
+  newBoard.grid = this.grid.map(row => row.map(tile => (
+    Object.assign(new Tile(newBoard, tile.pos), tile)
+  )));
+  newBoard.grid.forEach(row => row.forEach(tile => {
+    tile.board = newBoard;
+  }));
+  return newBoard;
+};
+
 module.exports = {
   Board: Board,
   Tile: Tile

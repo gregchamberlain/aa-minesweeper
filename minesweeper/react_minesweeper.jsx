@@ -5,6 +5,6 @@ import Game from './components/game';
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
   render(
-    <Game />
+    <Game gridSize={30} numBombs={60}/>
   ,root);
 });
