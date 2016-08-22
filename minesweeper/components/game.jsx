@@ -44,8 +44,10 @@ class Game extends Component {
 
     return (
       <div className="game-wrapper">
-        <h1>Minesweeper</h1>
-        <button onClick={this.undo.bind(this)}>Undo</button>
+        <div className="game-header">
+          <h1>Minesweeper</h1>
+          <button onClick={this.undo.bind(this)} className="undo">Undo</button>
+        </div>
         <Board board={this.state.board.grid} updateGame={this.updateGame.bind(this)}/>
         { won || lost ? <Modal won={won} undo={this.undo.bind(this)} restart={this.restartGame.bind(this)}/> : null }
       </div>

@@ -67,3 +67,19 @@ body {
 .flag, .bomb {
   color: red;
 }
+
+.game-header {
+  display: flex;
+  align-items: center;
+}
+
+.undo {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  background: #aae;
+  font-size: 20px;
+  border-radius: 10px;
+}

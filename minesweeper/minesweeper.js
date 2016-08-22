@@ -115,7 +115,7 @@ Board.prototype.won = function () {
   var won = true;
   this.grid.forEach(function(row) {
     row.forEach(function(tile) {
-      if (tile.flagged === tile.revealed || tile.flagged !== tile.bombed) {
+      if (!tile.explored && !tile.bombed) {
         won = false;
       }
     });
