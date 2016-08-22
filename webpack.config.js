@@ -1,5 +1,4 @@
 module.exports = {
-  context: __dirname,
   entry: "./widgets.jsx",
   output: {
     path: "./",
@@ -19,7 +18,7 @@ module.exports = {
   },
   devtool: "source-map",
   resolve: {
-    extensions: ["", "js", "jsx"]
+    extensions: ["", ".js", ".jsx"]
   },
 
 };
